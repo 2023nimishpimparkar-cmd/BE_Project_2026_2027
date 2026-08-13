@@ -209,7 +209,56 @@ The overall system consists of a PLC-based control section and an OpenCV-based i
                                   │                       │
                                   └───────────┬───────────┘
                                               │
-                                              ▼
-                                      ┌───────────────┐
+                                              
+                                      ┌───────────────┐---
+
+## Real-World Applications
+
+### 1. Water Bottling Plants
+
+The proposed system can be used in water bottling plants to automatically detect bottles, fill them to a predefined level, and inspect the filled bottles for incorrect water levels or possible spillage.
+
+### 2. Beverage Industries
+
+The system can be adapted for automated filling of beverages such as juices, soft drinks, and other liquid products by using suitable pumps, filling mechanisms, and sensors.
+
+### 3. Food and Liquid Packaging Industries
+
+The system can be used in food and liquid packaging industries where accurate and repeatable filling of bottles is required along with automated quality inspection.
+
+---
+
+## Advantages
+
+### 1. Reduced Human Intervention
+
+The system automatically performs bottle detection, conveyor movement, filling, and inspection, thereby reducing manual effort.
+
+### 2. Consistent Filling and Inspection
+
+The PLC provides controlled operation of the filling process, while the OpenCV system checks the water level and possible spillage.
+
+### 3. Improved Automation and Efficiency
+
+The integration of PLC, proximity sensor, conveyor, water pump, camera, and OpenCV provides an automated and systematic bottle-filling process.
+
+---
+
+## Disadvantages / Limitations
+
+### 1. Dependence on Sensor and Camera Conditions
+
+The performance of the system depends on proper sensor operation, camera positioning, and suitable lighting conditions during image processing.
+
+### 2. Limited Bottle Compatibility
+
+The prototype is designed for specific bottle dimensions and filling conditions. Different bottle sizes may require changes in the conveyor arrangement, filling mechanism, and OpenCV parameters.
+
+### 3. Initial Cost and Maintenance
+
+The system requires components such as a PLC, conveyor, motor, pump, sensors, relay, and camera. These components increase the initial cost and require periodic maintenance.
+
+---
                                       │   PASS / FAIL │
                                       └───────────────┘
+ffg
