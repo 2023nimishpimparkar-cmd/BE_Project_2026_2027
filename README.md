@@ -1,26 +1,241 @@
-````markdown
 # BE Capstone Project
 
 ## Project Title
 
-**Write the full title of your project here**
+**Automatic Bottle Filling Using PLC**
 
 ---
 
 ## Team Details
 
-| Sr. No. | Name of Student | Roll No. | Branch | Email ID |
-|---|---|---|---|---|
-| 1 |  |  |  |  |
-| 2 |  |  |  |  |
-| 3 |  |  |  |  |
-| 4 |  |  |  |  |
+| Sr. No. | Name of Student  | Roll No. | Branch                  | Email ID |
+| ------- | ---------------- | -------- | ----------------------- | -------- |
+| 1       | Ruchika Pandey   | 18       | Automation and Robotics |          |
+| 2       | Nimish Pimparkar | 22       | Automation and Robotics |          |
+| 3       | Krishna Tikoo    | 29       | Automation and Robotics |          |
+| 4       |                  |          | Automation and Robotics |          |
 
 ---
 
 ## Guide Details
 
-**Project Guide:**  
+**Project Guide:** Jayshree Ramakrishnan
+**Department:** Automation and Robotics
+**Institute:** VESIT, Mumbai
+
+---
+
+## Problem Statement
+
+Manual bottle filling can result in inconsistent filling levels, water spillage, and human error. There is a need for an automated bottle-filling system that can accurately detect bottles, control the filling process, and inspect the filled bottles with minimal human intervention.
+
+The aim of this project is to design and develop an **automatic bottle filling and inspection system using PLC-based control and OpenCV-based quality inspection**. The system will automate the conveyor movement, bottle detection, water filling, and quality inspection process.
+
+---
+
+## Abstract
+
+Manual bottle filling is a time-consuming process that can lead to inconsistent filling levels, water spillage, and human error. To overcome these limitations, this project proposes an automated bottle filling system using a Programmable Logic Controller (PLC) along with an OpenCV-based quality inspection system.
+
+The PLC controls the major operations of the system, including the conveyor, bottle detection, and water pump. A proximity sensor detects the presence of a bottle at the filling position and triggers the filling sequence for a predefined duration. After filling, a camera captures an image of the bottle at the inspection platform. OpenCV-based image processing is then used to determine the water level and detect possible spillage.
+
+The detected water level is compared with the required filling range, and the bottle is classified as either **PASS or FAIL** based on the inspection result. The proposed system aims to provide consistent bottle filling, reduce manual intervention, minimize spillage, and improve quality control.
+
+The project can be applied to automated bottle-filling and inspection processes where reliable and repeatable operation is required.
+
+---
+
+## Objectives
+
+1. To study the existing manual bottle-filling process and its limitations.
+2. To design a PLC-based automated bottle-filling system.
+3. To develop a conveyor system for automatic bottle movement and positioning.
+4. To implement bottle detection using a proximity sensor.
+5. To control the water pump and filling process using PLC programming.
+6. To develop an OpenCV-based vision system for water-level and spillage detection.
+7. To classify bottles as PASS or FAIL based on the inspection results.
+8. To integrate the PLC, sensor, conveyor, pump, relay, and vision system.
+9. To test and validate the complete automated system.
+10. To document the project and its results.
+
+---
+
+## Scope of the Project
+
+The project covers the design and development of an automated prototype for bottle filling and quality inspection.
+
+The scope includes:
+
+* Design and development of a PLC-based control system.
+* Automatic conveyor-based bottle movement.
+* Bottle detection using a proximity sensor.
+* Automatic control of the water pump.
+* Filling bottles for a predefined time.
+* Integration of PLC hardware and control components.
+* Camera-based bottle inspection.
+* OpenCV-based water-level detection.
+* Detection of possible water spillage.
+* PASS/FAIL classification of bottles.
+* Testing and debugging of the complete system.
+* Performance evaluation and project documentation.
+
+---
+
+## Existing System
+
+In a conventional manual bottle-filling process, bottles are positioned and filled manually. The operator is responsible for controlling the filling operation and checking the filled bottles.
+
+This method can result in:
+
+* Inconsistent water levels.
+* Water spillage during filling.
+* Human error.
+* Increased manual intervention.
+* Difficulty in maintaining consistent quality.
+* Reduced process automation.
+
+The uploaded project material specifically identifies inconsistent filling, spillage, and human error as key problems associated with manual bottle filling.
+
+---
+
+## Proposed System
+
+The proposed system is an **automated PLC-based bottle filling and OpenCV-based inspection system**.
+
+The system uses a conveyor to move bottles automatically. A proximity sensor detects when a bottle reaches the filling position and sends a signal to the PLC. The PLC then controls the filling sequence and operates the water pump for a predefined period.
+
+After filling, the bottle is moved to an inspection platform where a camera captures its image. OpenCV processes the captured image to determine the water level and detect possible spillage. The detected water level is compared with the required filling range. Based on the inspection result, the bottle is classified as **PASS or FAIL**.
+
+### Major Components
+
+* PLC
+* Proximity sensor
+* Conveyor system
+* Conveyor motor
+* Water pump
+* Relay module
+* Power supply
+* Camera
+* OpenCV-based image-processing system
+
+The PLC, sensor, conveyor, pump, relay, and power supply have already been identified as the main hardware components.
+
+### Working Principle
+
+1. The conveyor moves the bottle toward the filling position.
+2. The proximity sensor detects the bottle.
+3. The sensor sends an input signal to the PLC.
+4. The PLC stops/positions the conveyor and activates the water pump.
+5. The bottle is filled for a predefined duration.
+6. The pump is switched off after the filling sequence.
+7. The conveyor moves the filled bottle to the inspection platform.
+8. A camera captures the filled bottle.
+9. OpenCV processes the captured image.
+10. The system determines the water level and checks for spillage.
+11. The water level is compared with the required filling range.
+12. The bottle is classified as **PASS** or **FAIL**.
+
+The vision-inspection flow is:
+
+**Camera → Image Processing → Level & Spillage Detection → PASS/FAIL**
+
+---
+
+## System Architecture
+
+```text
+                    ┌──────────────────────┐
+                    │      Power Supply    │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │         PLC          │
+                    │  Control & Sequence  │
+                    └───────┬───────┬──────┘
+                            │       │
+              ┌─────────────┘       └──────────────┐
+              ▼                                    ▼
+    ┌──────────────────┐                 ┌──────────────────┐
+    │ Proximity Sensor │                 │   Relay Module   │
+    │ Bottle Detection │                 └───────┬──────────┘
+    └────────┬─────────┘                         │
+             │                         ┌─────────┴─────────┐
+             ▼                         ▼                   ▼
+       Bottle Detected          Conveyor Motor        Water Pump
+             │                         │                   │
+             └─────────────────────────┴───────────────────┘
+                                       │
+                                       ▼
+                              ┌─────────────────┐
+                              │ Filled Bottle   │
+                              │ Inspection Area │
+                              └────────┬────────┘
+                                       │
+                                       ▼
+                              ┌─────────────────┐
+                              │      Camera     │
+                              └────────┬────────┘
+                                       │
+                                       ▼
+                              ┌─────────────────┐
+                              │     OpenCV      │
+                              │ Image Processing│
+                              └────────┬────────┘
+                                       │
+                         ┌─────────────┴─────────────┐
+                         ▼                           ▼
+                 Water Level Detection        Spillage Detection
+                         │                           │
+                         └─────────────┬─────────────┘
+                                       ▼
+                              ┌─────────────────┐
+                              │   PASS / FAIL   │
+                              └─────────────────┘
+```
+
+---
+
+## Current Project Status
+
+The PLC control architecture for the conveyor and water pump has been finalized, including the required inputs, outputs, and operating sequence. The required components have also been identified.
+
+The bottle detection sensor has been selected, and a relay module has been selected for safe control of the conveyor motor and water pump. Basic PLC ladder logic for start/stop, bottle detection, conveyor operation, and pump control has been developed. PLC programming, hardware integration, and component testing are currently in progress.
+
+---
+
+## Expected Outcome
+
+The expected outcome of the project is a working automated bottle-filling prototype capable of:
+
+* Automatically detecting bottles.
+* Automatically positioning bottles using a conveyor.
+* Controlling the filling process using a PLC.
+* Filling bottles for a predefined duration.
+* Detecting water level using OpenCV.
+* Detecting possible water spillage.
+* Classifying bottles as PASS or FAIL.
+* Reducing manual intervention.
+* Improving filling consistency and quality inspection.
+
+---
+
+## Project Timeline
+
+| Activity                             | Target         |
+| ------------------------------------ | -------------- |
+| Finalize Project Design & Components | April 2026     |
+| Research Started                     | July 2026      |
+| Procure Required Components          | August 2026    |
+| Build Conveyor & Filling Mechanism   | September 2026 |
+| Develop PLC Program                  | September 2026 |
+| Integrate Sensor, Pump & Conveyor    | October 2026   |
+| Develop OpenCV Bottle Detection      | October 2026   |
+| Complete Testing & Debugging         | November 2026  |
+| Final Demonstration & Documentation  | November 2026  |
+
+The timeline is based on the milestone schedule provided in the project presentation.
+
 **Department:** Automation and Robotics  
 **Institute:** VESIT, Mumbai  
 
