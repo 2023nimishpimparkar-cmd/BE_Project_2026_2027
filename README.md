@@ -13,7 +13,7 @@
 | 1 | Ruchika Pandey | 18 | Automation and Robotics | |
 | 2 | Nimish Pimparkar | 22 | Automation and Robotics | |
 | 3 | Krishna Tikoo | 29 | Automation and Robotics | |
-| 4 | | | Automation and Robotics | |
+
 
 ---
 
