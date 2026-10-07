@@ -2,7 +2,7 @@
 
 ## Project Title
 
-**Automatic Bottle Filling Using PLC**
+**PLC based Automatic Bottle filling with AI-based Quality Inspection**
 
 ---
 
