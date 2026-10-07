@@ -10,8 +10,8 @@
 
 | Sr. No. | Name of Student | Roll No. | Branch | Email ID |
 |---|---|---|---|---|
-| 1 | Ruchika Pandey | 18 | Automation and Robotics | |
-| 2 | Nimish Pimparkar | 22 | Automation and Robotics | |
+| 1 | Ruchika Pandey | 18 | Automation and Robotics | ruchika.pandey2604@gmail.com|
+| 2 | Nimish Pimparkar | 22 | Automation and Robotics | 2023.nimish.pimparkar@ves.ac.in|
 | 3 | Krishna Tikoo | 29 | Automation and Robotics | |
 
 
