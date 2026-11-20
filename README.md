@@ -109,7 +109,7 @@ Part 2 – AI-Based Bottle Inspection
 | Zebronics Zeb-Crystal Clear 480p Webcam |           1 | Bottle image/video capture    |
 | Acer Aspire Lite AL15-41 Laptop         |           1 | AI processing                 |
 | XCLUMA 5V USB 2-Channel Relay           |           1 | Red LED switching             |
-| 12V Red LED Indicator                   |           1 | Defective bottle indication   |
+| 12V Green LED Indicator                   |           1 | Defective bottle indication   |
 | 12V DC Adapter                          |           1 | Red LED power                 |
 | White LED/Light Source                  |         1–2 | Controlled illumination       |
 | Bottle Samples                          |    Multiple | YOLO training/testing         |
